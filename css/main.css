@@ -126,6 +126,7 @@ html, body {
 /* Dark mode button */
 
 .dark-mode-btn {
+    order: 9;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -148,6 +149,12 @@ html, body {
     height: 24px;
     border-radius: 50%;
     background-color: var(--white);
+
+    transition: left 0.2s ease-in;
+}
+
+.dark-mode-btn--active::before {
+    left: 26px;
 }
 
 .dark-mode-btn__icon{ 
@@ -368,6 +375,16 @@ html, body {
     margin-top: 0.5em;
 }
 
+@media (max-width: 636px) {
+    .nav-row {
+        justify-content: space-between;
+    }
+
+    .dark-mode-btn {
+        order: 0;
+    }
+}
+
 @media (max-width: 620px) {
 
     /* Header */
@@ -382,6 +399,14 @@ html, body {
 
     .header__title strong {
         font-size: 40px;
+    }
+
+    .nav-row {
+        justify-content: space-between;
+    }
+
+    .dark-mode-btn {
+        order: 0;
     }
 
     /* Generall */
